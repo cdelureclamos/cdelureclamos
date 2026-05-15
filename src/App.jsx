@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
  
 // ─── Supabase config ──────────────────────────────────────────────────────────
-const SUPABASE_URL = "https://rblnowaafIxfdwbhxvhp.supabase.co";
+const SUPABASE_URL = "https://rblnowaafixfdwbhxvhp.supabase.co";
 const SUPABASE_KEY = "sb_publishable_3XDLlB6zgAjrx-OecF-ekg_Y7mMc6aD";
  
 async function supabase(method, path, body) {
