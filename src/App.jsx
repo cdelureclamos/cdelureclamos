@@ -182,7 +182,7 @@ function LeafletReportesMap({ reportes, filtroCat, onSelect }) {
     const L = window.L; if (!L) return;
     markersRef.current.forEach(m => map.removeLayer(m));
     markersRef.current = [];
-    reps.filter(r => fil === "todos" || r.categoria === fil).forEach(r => {
+    reps.filter(r => r.estado !== "resuelto" && (fil === "todos" || r.categoria === fil)).forEach(r => {
       const icon = r.estado === "resuelto"
         ? L.divIcon({ html: `<div style="width:32px;height:32px;border-radius:50%;background:#22c55e;border:2px solid white;display:flex;align-items:center;justify-content:center;font-size:14px;box-shadow:0 2px 8px rgba(0,0,0,0.2);">✓</div>`, className: "", iconSize: [32, 32], iconAnchor: [16, 16] })
         : makeCatPin(r.categoria, r.nivel);
